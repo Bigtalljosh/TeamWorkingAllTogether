@@ -228,7 +228,7 @@ namespace TeamWorkingAllTogether
             if (padInput.rightTriggerPressed && !player.isDead)
             {
                 int randomIndex = rand.Next(1, 8);
-                bullets.Add(new Projectile(bulletTextures[randomIndex], new Vector2(player.playerPos.X + rand.Next(5, 55), player.playerPos.Y + rand.Next(0, 8)), player.rotationInRadians, player.direction, 1));
+                bullets.Add(new Projectile(bulletTextures[randomIndex], new Vector2((player.playerPos.X ), player.playerPos.Y  + rand.Next(0, 8)), player.rotationInRadians, player.direction, 1));
             }
             if (padInput2.rightTriggerPressed && !playerTwo.isDead)
             {
