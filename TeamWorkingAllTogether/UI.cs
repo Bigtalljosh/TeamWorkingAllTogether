@@ -26,8 +26,8 @@ namespace TeamWorkingAllTogether.UI
 
         public UI(SpriteBatch sb, SpriteFont font, Texture2D green, Texture2D black, Texture2D red)
         {
-            this.totalHealthP1 = 100;
-            this.totalHealthP2 = 100;
+            totalHealthP1 = 100;
+            totalHealthP2 = 100;
             this.sb = sb;
             this.font = font;
             this.red = red;
@@ -72,7 +72,6 @@ namespace TeamWorkingAllTogether.UI
             Rectangle updateRect2 = new Rectangle(850, 50, currentHealthP2, green.Height);
             greenRectangle1 = updateRect1;
             greenRectangle2 = updateRect2;
-
         }
 
         public void resetHealth()
@@ -80,7 +79,5 @@ namespace TeamWorkingAllTogether.UI
             currentHealthP1 = 100;
             currentHealthP2 = 100;
         }
-
-        
     }
 }

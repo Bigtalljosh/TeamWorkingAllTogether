@@ -1,15 +1,13 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace GameTest
+namespace TeamWorkingAllTogether
 {
     class MapGenerator
     {
-
         Random rand = new Random();
+
         public List<List<bool>> GenerateMap(int size)
         {
             //create empty list
@@ -22,22 +20,21 @@ namespace GameTest
                     grid[x].Add(false);
                 }
             }
+
             // random selection 
             for (int i = 0; i < grid.Count; i++)
             {
                 for (int j = 0; j < grid.Count; j++)
                 {
-
                     if (rand.Next(100) < 70)
                     {
                         grid[i][j] = false;
                     }
                     else grid[i][j] = true;
-
                 }
             }
-            // remove cross section for pathway
 
+            // remove cross section for pathway
             for (int x = 0; x < grid.Count; x++)
             {
                 grid[grid.Count / 2][x] = false;
@@ -63,13 +60,10 @@ namespace GameTest
                     {
                         grid[i][j] = true;
                     }
-
-
                 }
             }
             return grid;
         }
-
 
         public List<Wall> generateWalls(List<Texture2D>textures,List<List<bool>> pos)
         {
@@ -78,13 +72,10 @@ namespace GameTest
             {
                 for (int j = 0; j < pos[i].Count; j++)
                 {
-                    
                     if (pos[i][j]) walls.Add(new Wall(textures[rand.Next(textures.Count)], i, j));
                 }
             }
             return walls;
         }
-
-
     }
 }

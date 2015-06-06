@@ -130,22 +130,19 @@
     <Compile Include="Camera.cs" />
     <Compile Include="Credits.cs" />
     <Compile Include="Game1.cs" />
-    <Compile Include="GamePadInput.cs" />
     <Compile Include="GamePage.xaml.cs">
       <DependentUpon>GamePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="GameScreen.cs" />
     <Compile Include="Input.cs" />
-    <Compile Include="isColliding.cs" />
-    <Compile Include="Item.cs" />
-    <Compile Include="ItemManager.cs" />
+    <Compile Include="Helpers.cs" />
     <Compile Include="MapGenerator.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Projectile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Screen.cs" />
     <Compile Include="TitleScreen.cs" />
-    <Compile Include="UI\UI.cs" />
+    <Compile Include="UI.cs" />
     <Compile Include="Wall.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -163,7 +160,6 @@
     <Content Include="Content\floor.png" />
     <Content Include="Content\MedKit.png" />
     <Content Include="Content\Pip.png" />
-    <Content Include="Content\player.png" />
     <Content Include="Content\TEX_Bullet1.png" />
     <Content Include="Content\TEX_Bullet2.png" />
     <Content Include="Content\TEX_Bullet3.png" />

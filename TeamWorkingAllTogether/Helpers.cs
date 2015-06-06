@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 
 namespace TeamWorkingAllTogether
 {
-    class isColliding
+    class Helpers
     {
-
         public bool isItColliding(Rectangle rec1, Rectangle rec2)
         {
             if(rec1.Intersects(rec2))
@@ -22,5 +17,14 @@ namespace TeamWorkingAllTogether
             }
         }
 
+        public float RotationInRadians(Vector2 vect)
+        {
+            return (float)Math.Atan2((double)vect.Y, (double)vect.X) + MathHelper.PiOver2;
+        }
+
+        public static float ToAngle(Vector2 vector)
+        {
+            return (float)Math.Atan2(vector.Y, vector.X);
+        }
     }
 }

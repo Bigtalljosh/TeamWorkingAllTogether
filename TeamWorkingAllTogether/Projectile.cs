@@ -1,9 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace TeamWorkingAllTogether
 {
@@ -16,6 +12,7 @@ namespace TeamWorkingAllTogether
         public int timer = 1000;
         float rotation;
         public int playerNum;
+
         public Projectile(Texture2D t, Vector2 loc, float rot, Vector2 direction, int pn)
         {
             tex = t;
@@ -24,6 +21,7 @@ namespace TeamWorkingAllTogether
             dir = direction;
             playerNum = pn;
         }
+
         public void Update(GameTime gameTime)
         {
             if (!bisHit)
@@ -37,17 +35,20 @@ namespace TeamWorkingAllTogether
                 timer--;
             }
         }
+
         public void Draw(SpriteBatch sb)
         {
 
             sb.Draw(tex, rect = new Rectangle((int)(pos.X), (int)pos.Y, 8, 8), null, Color.White, rotation, Vector2.Zero, SpriteEffects.None, 1);
 
         }
+
         public Rectangle getRect()
         {
             rect = new Rectangle((int)(pos.X), (int)pos.Y, 8, 8);
             return rect;
         }
+
         public void setHit()
         {
             bisHit = true;
